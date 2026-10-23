@@ -197,8 +197,19 @@ strong{font-weight:700}
 .footer__copy{font-size:12.5px;color:var(--muted);margin-top:13px}
 
 /* ---------- página puente /entrar/ ---------- */
-.bridge{display:grid;place-items:center;padding:clamp(40px,6vw,72px) 16px;background:linear-gradient(180deg,#eef2f7,#fff)}
-.bridge__card{max-width:560px;width:100%;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:clamp(26px,4vw,40px);text-align:left}
+.bridge{display:grid;place-items:center;padding:clamp(36px,5vw,64px) 16px;background:radial-gradient(1000px 480px at 85% -10%,#1b3357 0%,transparent 55%),linear-gradient(180deg,#0a1628,#0e1f38)}
+.bridge__card{max-width:940px;width:100%;background:#fff;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.35);display:grid;grid-template-columns:.92fr 1.08fr;overflow:hidden;text-align:left}
+.bridge__side{background:var(--navy2);color:#fff;padding:clamp(26px,3.4vw,38px);display:flex;flex-direction:column}
+.bridge__side-kicker{font-size:11.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#8fa2bb}
+.bridge__side h2{color:#fff;font-size:clamp(22px,2.6vw,28px);margin:10px 0 22px}
+.bridge__mini{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.bridge__mini li{display:grid;grid-template-columns:1fr auto;gap:3px 12px;align-items:baseline}
+.bridge__mini span{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#9fb0c6}
+.bridge__mini strong{font-size:21px;font-weight:800}
+.bridge__mini i{grid-column:1/-1;display:block;height:5px;border-radius:3px;background:var(--accent);opacity:.9}
+.bridge__perks{gap:10px;font-size:13.5px}
+.bridge__side-note{margin-top:auto;padding-top:22px;font-size:11.5px;color:#8494ab}
+.bridge__main{padding:clamp(26px,3.4vw,38px)}
 .bridge__icon{display:grid;place-items:center;width:52px;height:52px;border-radius:10px;background:var(--navy);margin-bottom:18px}
 .bridge__icon svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .bridge__title{font-size:clamp(26px,3.4vw,34px);margin-bottom:12px;color:var(--navy)}
@@ -217,6 +228,10 @@ strong{font-weight:700}
   .demo,.price,.about{grid-template-columns:1fr}
   .freeze{grid-template-columns:1fr}
   .freeze__facts{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .bridge__card{grid-template-columns:1fr}
+  .bridge__side-note{margin-top:18px}
 }
 @media (max-width:640px){
   .top__cta .btn--outline{display:none}
