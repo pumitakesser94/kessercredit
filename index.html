@@ -191,7 +191,7 @@
   <section class="section section--tint" id="secundarios">
     <p class="kicker">Protección completa</p>
     <h2>Congele también los burós secundarios</h2>
-    <p class="lead">Además de los tres principales, existen burós especializados que las empresas consultan para abrir cuentas bancarias, líneas de teléfono, servicios del hogar y crédito alternativo. Congelarlos cierra las puertas que un robo de identidad suele usar primero. El proceso es el mismo: usted elige <strong>uno</strong>, sigue sus pasos y lo solicita en su página oficial, gratis.</p>
+    <p class="lead">Además de los tres principales, existen burós especializados que las empresas consultan para verificar identidad y evaluar crédito alternativo. Congelarlos cierra las puertas que un robo de identidad suele usar primero. El proceso es el mismo: usted elige <strong>uno</strong>, sigue sus pasos y lo solicita en su página oficial, gratis.</p>
 
     <div class="freeze">
       <div class="freeze__picker" role="radiogroup" aria-label="Seleccione el buró secundario que desea congelar">
@@ -205,19 +205,14 @@
           <span class="bureau__info"><strong>LexisNexis · SageStream</strong><small>Riesgo e identidad — una solicitud congela ambos</small></span>
           <span class="bureau__free">Gratis</span>
         </button>
-        <button type="button" class="bureau s-bureau" data-sbureau="chexsystems" role="radio" aria-checked="false">
-          <span class="bureau__radio"></span>
-          <span class="bureau__info"><strong>ChexSystems</strong><small>Historial bancario y apertura de cuentas</small></span>
-          <span class="bureau__free">Gratis</span>
-        </button>
-        <button type="button" class="bureau s-bureau" data-sbureau="nctue" role="radio" aria-checked="false">
-          <span class="bureau__radio"></span>
-          <span class="bureau__info"><strong>NCTUE</strong><small>Telefonía, internet y servicios del hogar</small></span>
-          <span class="bureau__free">Gratis</span>
-        </button>
         <button type="button" class="bureau s-bureau" data-sbureau="teletrack" role="radio" aria-checked="false">
           <span class="bureau__radio"></span>
           <span class="bureau__info"><strong>CoreLogic Teletrack</strong><small>Crédito alternativo</small></span>
+          <span class="bureau__free">Gratis</span>
+        </button>
+        <button type="button" class="bureau s-bureau" data-sbureau="clarity" role="radio" aria-checked="false">
+          <span class="bureau__radio"></span>
+          <span class="bureau__info"><strong>Clarity Services</strong><small>Crédito alternativo — parte de Experian</small></span>
           <span class="bureau__free">Gratis</span>
         </button>
         <p class="freeze__hint">Seleccione un buró secundario para ver sus pasos y su enlace oficial.</p>
@@ -321,7 +316,7 @@
       <details><summary>¿Cuánto cuesta después de la prueba?</summary><p>La prueba dura 7 días y cuesta $1. Después continúa una membresía mensual cuyo precio exacto aparece en la página de registro, antes de confirmar el cargo.</p></details>
       <details><summary>¿Puedo cancelar en cualquier momento?</summary><p>Sí, desde su propia cuenta, sin permanencia y sin penalidad.</p></details>
       <details><summary>¿Puedo congelar un solo buró?</summary><p>Sí. El congelamiento siempre es buró por buró: usted elige cuál congelar y lo solicita en la página oficial de ese buró, gratis. En la sección «Congele el buró que usted elija» de esta página encontrará los enlaces oficiales y el teléfono de cada uno.</p></details>
-      <details><summary>¿Qué son los burós secundarios y por qué congelarlos también?</summary><p>Son agencias especializadas que las empresas consultan fuera de los tres burós principales: Innovis (crédito), LexisNexis y SageStream (riesgo e identidad), ChexSystems (cuentas bancarias), NCTUE (telefonía y servicios) y CoreLogic Teletrack (crédito alternativo). Un estafador puede abrir una cuenta bancaria o una línea de teléfono a su nombre sin tocar su crédito principal; congelar estos archivos cierra también esas puertas. En la sección «Congele también los burós secundarios» tiene los enlaces oficiales de cada uno.</p></details>
+      <details><summary>¿Qué son los burós secundarios y por qué congelarlos también?</summary><p>Son agencias especializadas que las empresas consultan fuera de los tres burós principales: Innovis (crédito), LexisNexis y SageStream (riesgo e identidad), CoreLogic Teletrack y Clarity Services (crédito alternativo). Un estafador puede mover su identidad por estos archivos sin tocar su crédito principal; congelarlos cierra también esas puertas. En la sección «Congele también los burós secundarios» tiene los enlaces oficiales de cada uno.</p></details>
       <details><summary>¿Cómo se protege mi información?</summary><p>El registro se realiza directamente en la plataforma del proveedor, con conexión cifrada. Kesser Credit nunca solicita su número de Seguro Social ni sus contraseñas por esta página, por WhatsApp ni por correo electrónico.</p></details>
     </div>
   </section>
@@ -349,9 +344,8 @@
   var SDATA = {
     innovis:     { name: "Innovis", url: "https://www.innovis.com/personal/securityFreeze", urlText: "innovis.com/personal/securityFreeze", phone: "1-800-540-2505", note: "Innovis le enviará un PIN de 10 dígitos por correo postal. Guárdelo en un lugar seguro." },
     lexisnexis:  { name: "LexisNexis", url: "https://consumer.risk.lexisnexis.com/freeze", urlText: "consumer.risk.lexisnexis.com/freeze", phone: "1-800-456-1244", note: "Una sola solicitud en LexisNexis congela a la vez su archivo de LexisNexis y el de SageStream." },
-    chexsystems: { name: "ChexSystems", url: "https://www.chexsystems.com/security-freeze/place-freeze", urlText: "chexsystems.com/security-freeze/place-freeze", phone: "1-800-887-7652", note: "Mientras esté congelado, los bancos no podrán abrir cuentas nuevas a su nombre. Si va a abrir una cuenta, levante el congelamiento antes." },
-    nctue:       { name: "NCTUE", url: "https://www.nctue.com/consumer", urlText: "nctue.com/consumer", phone: "1-866-349-5355", note: "Si se está mudando, active primero sus servicios de telefonía e internet y congele después." },
-    teletrack:   { name: "CoreLogic Teletrack", url: "https://consumers.teletrack.com/freeze", urlText: "consumers.teletrack.com/freeze", phone: "", note: "El congelamiento de Teletrack se solicita en línea desde su página oficial." }
+    teletrack:   { name: "CoreLogic Teletrack", url: "https://consumers.teletrack.com/freeze", urlText: "consumers.teletrack.com/freeze", phone: "", note: "El congelamiento de Teletrack se solicita en línea desde su página oficial." },
+    clarity:     { name: "Clarity Services", url: "https://consumers.clarityservices.com/", urlText: "consumers.clarityservices.com", phone: "1-866-390-3118", note: "Clarity Services, parte de Experian, guarda datos de servicios financieros alternativos: préstamos de pequeña cantidad, rent-to-own y productos similares." }
   };
   var sbtns = document.querySelectorAll(".s-bureau");
   var sName = document.getElementById("sec-name");
